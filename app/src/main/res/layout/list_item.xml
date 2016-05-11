@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/cardlist_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="@dimen/cardview_default_elevation"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relListRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/photo"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView android:layout_width="fill_parent"
+                android:layout_height="200dip"
+                android:background="@drawable/transparent_background"
+                android:contentDescription="@string/action_settings"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Judul"
+                android:textSize="@dimen/activity_vertical_margin"
+                android:textAllCaps="true"
+                android:paddingLeft="10dip"
+                android:paddingBottom="13dip"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:id="@+id/itemDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="deskripsi"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                android:paddingLeft="10dip"
+                android:paddingBottom="13dip"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relBerita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relListRes">
+
+            <TextView
+                android:id="@+id/txt_detail_berita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detail Berita"
+                android:padding="10dp"
+                android:maxLines="5"
+                android:ellipsize="end"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relBerita">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="Read More"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/btnReadmore" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".SubmitIdeStepOne">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="THIRD TEAM MEMBER ID"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:padding="20dp"
+                android:textColor="@color/red2"/>
+
+                <EditText
+                    android:id="@+id/nama_member_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:allowUndo="true" />
+
+                <EditText
+                    android:id="@+id/dob_member_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Date of Birth  (DD-MM-YYYY)"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/gender_member_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Gender (Laki-Laki / Perempuan)"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:visibility="gone"/>
+
+                <RadioGroup
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Laki-Laki"
+                        android:textSize="18sp"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Perempuan"
+                        android:textSize="18sp"/>
+
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/phone_member_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:singleLine="true"/>
+
+                <EditText
+                    android:id="@+id/email_member_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:hint="E-mail "
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/online_profile_member_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:hint="Online Profile"
+                    android:inputType="textUri"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back_white_24dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"/>
+
+</android.support.design.widget.CoordinatorLayout>

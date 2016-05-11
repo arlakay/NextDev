@@ -1,0 +1,51 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relListRes"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="10dp"
+	android:background="@color/gray">
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@android:color/black"></View>
+
+    <com.android.volley.toolbox.NetworkImageView
+   		android:id="@+id/photo"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+    <ImageView android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:background="@drawable/transparent_background"
+        android:contentDescription="@string/action_settings"
+		android:visibility="gone"/>
+
+	<TextView
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#44330b"
+        android:textSize="@dimen/activity_vertical_margin"
+        android:paddingLeft="10dip"
+        android:paddingBottom="30dip"
+        android:layout_alignParentBottom="true"/>
+
+	<TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#44330b"
+        android:textSize="@dimen/smalll_text"
+        android:paddingLeft="10dip"
+        android:paddingBottom="13dip"
+        android:layout_alignParentBottom="true"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@android:color/black"></View>
+</RelativeLayout>
+

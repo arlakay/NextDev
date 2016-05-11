@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">NextDev</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="nav_item_attachment">Sign In</string>
+    <string name="nav_item_images">Profile</string>
+    <string name="nav_item_location">Add New Location</string>
+    <string name="nav_sub_menu_item01">Help</string>
+    <string name="nav_sub_menu_item02">About Cari Makan</string>
+    <string name="drawer_header_text">NextDev</string>
+
+
+    <!-- Label for the location preference [CHAR LIMIT=30] -->
+    <string name="pref_location_label">Gender</string>
+
+    <!-- Key name for storing location in SharedPreferences [CHAR LIMIT=NONE] -->
+    <string name="pref_location_key" translatable="false">location</string>
+
+    <!-- Default postal code for location preference [CHAR LIMIT=NONE] -->
+    <string name="pref_location_default" translatable="false">94043</string>
+    <!-- Label for the temperature units preference [CHAR LIMIT=30] -->
+    <string name="pref_units_label">Phone</string>
+
+    <!-- Label for metric option in temperature unit preference [CHAR LIMIT=25] -->
+    <string name="pref_units_label_metric">Metric</string>
+
+    <!-- Label for imperial option in temperature unit preference [CHAR LIMIT=25] -->
+    <string name="pref_units_label_imperial">Imperial</string>
+
+    <!-- Key name for temperature unit preference in SharedPreferences [CHAR LIMIT=NONE] -->
+    <string name="pref_units_key" translatable="false">units</string>
+
+    <!-- Value in SharedPreferences for metric temperature unit option [CHAR LIMIT=NONE] -->
+    <string name="pref_units_metric" translatable="false">metric</string>
+
+    <!-- Value in SharedPreferences for imperial temperature unit option [CHAR LIMIT=NONE] -->
+    <string name="pref_units_imperial" translatable="false">imperial</string>
+
+    <string name="timeline_info"><![CDATA[Timeline & Info]]></string>
+
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registered, Login here</string>
+    <string name="login_err_msg_email">E-mail salah atau kosong</string>
+    <string name="login_err_msg_password">Password salah atau kosong</string>
+    <string name="coming_soon">We are preparing \n something awesome</string>
+    <string name="err_msg_name">Nama Kosong</string>
+    <string name="err_msg_email">Email Kosong</string>
+    <string name="err_msg_password">Password tidak boleh kosong</string>
+    <string name="err_msg_password2">password tidak boleh kosong</string>
+    <string name="err_msg_phone_number">No Telepon harus diawali 08</string>
+    <string name="faq_ask_one">Apakah NextDev itu?</string>
+    <string name="faq_answer_one">NextDev adalah sebuah ajang kompetisi pembuatan aplikasi teknologi,
+        baik website maupun mobile bagi anak muda Indonesia untuk membantu pemecahan masalah yang
+        dihadapi kota­kota di Indonesia. \n\n
+        Misi utama dari NextDev adalah membantu terwujudnya Smart City di perkotaan Indonesia dengan
+        mengintegrasikan teknologi dalam segala aspek termasuk pemerintahan, penduduk, kesehatan,
+        pendidikan dan transportasi.</string>
+
+    <string name="faq_ask_two">Aktivitas aktivitas apa saja yang ada di NextDev?</string>
+    <string name="faq_answer_two">Pada umumnya, aktivitas­aktivitas di NextDev terbagi menjadi 3 bagian,
+        yaitu pra-kompetisi, kompetisi, pasca­kompetisi: \n\n
+        ­ Pra­kompetisi: NextDev melakukan roadshow untuk sosialisasi kompetisi di berbagai kota diIndonesia. \n\n
+        ­ Kompetisi: NextDev mengumpulkan 20 finalis kompetisi di Jakarta untuk mengikuti bootcamp,
+        investor meetup dan rocket pitch. Selama berjalannya kompetisi, finalis dibekali dengan
+        berbagai ilmu dan dipertemukan dengan investor potensial yang dapat membantu pengembangan
+        aplikasi secara lebih lanjut. \n\n
+        ­ Pasca­kompetisi: NextDev melakukan acara ‘Pulang Kampung’ dari 20 finalis kompetisi dimana
+        para finalis akan berinteraksi langsung dengan anak muda di kota asal mereka.</string>
+
+    <string name="faq_ask_three">Dimanakah lokasi acara NextDev berlangsung?</string>
+    <string name="faq_answer_three">Lokasi setiap aktivitas dari NextDev dapat berubah­ubah,
+        kecuali untuk kompetisi utama yang akan dilakukan di Jakarta. Sebagai contoh,
+        NextDev Roadshow 2016 dilakukan di 20 kota yaitu Aceh, Medan, Pekanbaru, Palembang, Lampung,
+        Jakarta, Bogor, Bandung, Semarang, Yogyakarta, Banyuwangi, Malang, Surabaya, Pontianak,
+        Balikpapan, Banjarmasin, Denpasar, Makassar, Manado, dan Ambon. \n\n So, stay tune di sini untuk
+        mendapatkan informasi terbaru.</string>
+
+    <string name="faq_ask_four">Apakah ada kriteria untuk menjadi peserta NextDev?</string>
+    <string name="faq_answer_four">Terdapat 4 kriteria umum untuk menjadi peserta NextDev:\n
+        1. Warga Negara Indonesia.\n
+        2. Berusia minimal 18 tahun, maksimal 30 tahun.\n
+        3. Merupakan pelajar atau profesional.\n
+        4. Peserta dapat bergabung secara individu atau tim maksimal 3 orang.\n</string>
+
+    <string name="faq_ask_five">Apakah terdapat perpindahan atau pembagian hak milik atas ide
+        aplikasi yang saya ajukan di NextDev?</string>
+    <string name="faq_answer_five">Hak milik atas ide aplikasi tetap sepenuhnya menjadi milik Anda.
+        Sebaliknya, Anda akan dibantu untuk mengembangkan dan meluncurkan aplikasi Anda ke pasar secara nyata.</string>
+
+    <string name="faq_ask_six">Apa saja keuntungan yang didapat dari NextDev?</string>
+    <string name="faq_answer_six">Keuntungan utama dari NextDev ada pada edukasi dan network.
+        Para peserta akan diberikan pembekalan dari praktisi­praktisi ternama di berbagai bidang
+        seperti Smart City, UX Design, New Wave Technology, Marketing, Finance dan lain­lain.
+        Selain itu, peserta akan dihubungkan dengan stakeholders terkait seperti pemerintah dan
+        investor potensial.</string>
+
+    <string name="faq_ask_seven">Apakah ada biaya untuk pendaftaran NextDev?</string>
+    <string name="faq_answer_seven">Semua acara NextDev tidak dikenakan biaya dan terbuka bagi
+        siapapun yang memenuhi kriteria yang telah ditentukan.</string>
+
+    <string name="faq_ask_eight">Kepada siapa saya bisa menghubungi untuk penjelasan lebih detail
+        mengenai NextDev?</string>
+    <string name="faq_answer_eight">Anda bisa menghubungi kami melalui email ke contact@thenextdev.id</string>
+
+
+
+</resources>

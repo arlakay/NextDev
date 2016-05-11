@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_units_options">
+        <item>@string/pref_units_label_metric</item>
+        <item>@string/pref_units_label_imperial</item>
+    </string-array>
+
+    <string-array name="pref_units_values">
+        <item>@string/pref_units_metric</item>
+        <item>@string/pref_units_imperial</item>
+    </string-array>
+
+    <string-array name="judul">
+        <item>10 Kesalahan Yang Sering Startup Lakukan \n\n </item>
+        <item>Berdayakan UKM Tanah Air Lewat Aplikasi Digital \n\n</item>
+        <item>Startup Harus Pahami Big Data Ketika Memikirkan Smart City \n\n</item>
+        <item>Mengenal Lean Canvas, Model Bisnis untuk Startup \n\n</item>
+        <item>4 Hal Yang Perlu Dipahami Jika Startup Kamu Ingin Didanai Venture Capital \n\n</item>
+
+    </string-array>
+    <string-array name="artikel">
+        <item>  10 Kesalahan Yang Sering Startup Lakukan \n\n
+                Memulai bisnis itu sulit. Meluncurkan startup,
+                bahkan bisa jauh lebih sulit. Selain para pendiri startup
+                ditantang untuk membangun perusahaan dari nol hingga menjadi besar,
+                banyak pengusaha rintisan yang minim pengalaman di dunia bisnis.
+                Bahkan, meskipun mereka memiliki ide-ide brilian, masalah yang
+                jauh lebih kompleks pun timbul, seperti bagaimana mengelola perusahaan,
+                mengelola keuangan serta bagaimana mempekerjakan</item>
+        <item>  Berdayakan UKM Tanah Air Lewat Aplikasi Digital \n\n
+            Apapun bisnis kamu, terkadang kita kerap dihadapkan pada masalah pembukuan. Apalagi,
+            sebagai orang yang bertanggung jawab terhadap jalannya suatu usaha, kita kerap kesulitan
+            melakukan fungsi pengawasan dan validasi ketika kita harus melakukan business trip atau
+            jauh dari lokasi usaha kita berada. Beruntung dua pemuda asal Denpasar, Bali ini
+            menciptakan satu terobosan dengan melahirkan aplikasi bernama</item>
+        <item>  Startup Harus Pahami Big Data Ketika Memikirkan Smart City \n\n
+            Tujuan smart city hakikatnya adalah meningkatkan kualitas hidup lewat teknologi yang
+            mampu mengefisiensi layanan publik dan memenuhi kebutuhan masyarakat. Begitulah yang
+            dikatakan oleh Yohan Totting, Google Launchpad Mentor di acara The Next Dev Pulang
+            Kampung Bali yang berlangsung di Auditorium STIKOM, Bali. “Kita kalau pakai Google Maps
+            pasti menuliskan lokasi dan tujuan. Secara tidak langsung,</item>
+        <item>  Mengenal Lean Canvas, Model Bisnis untuk Startup \n\n
+            Sebenarnya ada dua tipe mahzab dalam membuat model bisnis, yaitu Business Model Canvas
+            dan Lean Canvas. Meskipun terkesan mirip (karena sama-sama mengusung kata canvas),
+            namun ada perbedaan mendasar antar keduanya. Business Model Canvas dipopulerkan oleh
+            Alexander Osterwalder berdasarkan bukunya yang berjudul Business Model Generation.
+            Pada Business Model Canvas, ada sembilan hal (digambarkan dalam kotak) yang</item>
+        <item>4 Hal Yang Perlu Dipahami Jika Startup Kamu Ingin Didanai Venture Capital \n\n
+            Berdiri pada tahun 2009, East Ventures, perusahaan investasi yang fokus kepada
+            pendanaan usaha tahap awal (seed funding) kini telah memiliki portofolio aktif di tiga negara,
+            yaitu Indonesia, Singapura, dan Jepang. Totalnya ada 80 portofolio startup di Asia Tenggara,
+            di mana 55 diantaranya berasal dari Indonesia. Selebihnya, ada 15 startup dari Amerika Serikat dan 150 startup</item>
+
+    </string-array>
+    <string-array name="gambar">
+        <item>satu.jpg</item>
+        <item>dua.jpeg</item>
+        <item>tiga.jpg</item>
+        <item>empat.jpg</item>
+        <item>lima.jpg</item>
+
+    </string-array>
+
+</resources>

@@ -1,0 +1,203 @@
+package com.erd.nextdev2016;
+
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.erd.nextdev2016.app.MyApplication;
+import com.erd.nextdev2016.helper.SessionManager;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Created by ILM on 5/8/2016.
+ */
+public class SubmitIdeStepFour extends AppCompatActivity {
+    private static final String url = "http://octolink.co.id/api/NextDev/index.php/api/transaction/submitidefour";
+    public String team, appName, appUrl, slideUrl, platform, appDescription;
+    private ProgressDialog pDialog;
+    private AlertDialog.Builder alertDialogBuilder;
+    private EditText etAppName, etAppUrl, etSlideUrl, etPlatform, etAppDescription;
+    private SessionManager session;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.submit_idea_step_four);
+
+        session = new SessionManager(getApplicationContext());
+        if (!session.isLoggedIn()) {
+            Intent intent = new Intent(SubmitIdeStepFour.this, RegisterActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+        alertDialogBuilder = new AlertDialog.Builder(SubmitIdeStepFour.this, R.style.AppCompatAlertDialogStyle);
+        alertDialogBuilder.setCancelable(false);
+
+        pDialog = new ProgressDialog(this);
+        pDialog.setCancelable(false);
+
+        Intent i = getIntent();
+        team = i.getStringExtra("team");
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        etAppName = (EditText)findViewById(R.id.app_name);
+        etAppUrl = (EditText)findViewById(R.id.web_app_url);
+        etSlideUrl = (EditText)findViewById(R.id.video_presentation_url);
+        etPlatform = (EditText)findViewById(R.id.platform);
+        etAppDescription = (EditText)findViewById(R.id.web_app_description);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appName= etAppName.getText().toString();
+                appUrl = etAppUrl.getText().toString();
+                slideUrl = etSlideUrl.getText().toString();
+                platform = etPlatform.getText().toString();
+                appDescription = etAppDescription.getText().toString();
+
+                if (appName.trim().length() > 0 && appUrl.trim().length() > 0 && slideUrl.trim().length() > 0
+                        && platform.trim().length() > 0 && appDescription.trim().length() > 0 ) {
+
+                    storeMemberFour(team, appName, appUrl, slideUrl, platform, appDescription);
+                } else {
+                    // Prompt user to enter credentials
+                    Toast.makeText(getApplicationContext(),
+                            "Please enter Credentials", Toast.LENGTH_LONG)
+                            .show();
+                }
+            }
+        });
+    }
+
+
+    private void storeMemberFour(final String team, final String appname, final String appurl,
+                                 final String slide, final String platform, final String deskripsi) {
+
+        pDialog.setMessage("Processing ...");
+        showDialog();
+
+        final StringRequest strReq = new StringRequest(Request.Method.POST,
+                url, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                //Log.d(TAG, "Register Response: " + response.toString());
+                hideDialog();
+
+                try {
+                    JSONObject jObj = new JSONObject(response);
+                    String error = jObj.getString("response");
+
+                    if (error.equals("00")){
+
+                        JSONObject data = jObj.getJSONObject("status");
+                        String reg_status = data.getString("submitide");
+
+                        hideDialog();
+
+                        alertDialogBuilder.setMessage("ALL DONE");
+                        alertDialogBuilder.setPositiveButton("DONE", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent i = new Intent(getApplicationContext(), HasilSubmitIdeActivity.class);
+                                startActivity(i);
+                                //finish();
+                            }
+                        });
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
+
+                    }else{
+
+                        alertDialogBuilder.setMessage("Registration Failed");
+                        alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //Intent i = new Intent(getApplicationContext(), Main2Activity.class);
+                                //startActivity(i);
+                                //finish();
+                            }
+                        });
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
+
+                    }
+
+                } catch (JSONException | NullPointerException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                //Log.e(TAG, "Registration Error: " + error.getMessage());
+                //Toast.makeText(getApplicationContext(),
+                //        "Registration Failed", Toast.LENGTH_LONG).show();
+                hideDialog();
+
+                MyApplication.getInstance().cancelPendingRequests(this);
+
+                alertDialogBuilder.setMessage("Registration Error: " + error.getMessage());
+                alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //Intent i = new Intent(getApplicationContext(), SubmitIdeStepTwo.class);
+                        //startActivity(i);
+                        //finish();
+                    }
+                });
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("namatim", team);
+                params.put("appname", appname);
+                params.put("appurl", appurl);
+                params.put("slideurl", slide);
+                params.put("platform", platform);
+                params.put("appdeskripsi", deskripsi);
+
+                return params;
+            }
+        };
+        // Adding request to request queue
+        MyApplication.getInstance().addToRequestQueue(strReq);
+    }
+
+    private void showDialog() {
+        if (!pDialog.isShowing())
+            pDialog.show();
+    }
+
+    private void hideDialog() {
+        if (pDialog.isShowing())
+            pDialog.dismiss();
+    }
+
+
+}
