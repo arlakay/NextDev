@@ -69,12 +69,11 @@
         para finalis akan berinteraksi langsung dengan anak muda di kota asal mereka.</string>
 
     <string name="faq_ask_three">Dimanakah lokasi acara NextDev berlangsung?</string>
-    <string name="faq_answer_three">Lokasi setiap aktivitas dari NextDev dapat berubah­ubah,
-        kecuali untuk kompetisi utama yang akan dilakukan di Jakarta. Sebagai contoh,
-        NextDev Roadshow 2016 dilakukan di 20 kota yaitu Aceh, Medan, Pekanbaru, Palembang, Lampung,
-        Jakarta, Bogor, Bandung, Semarang, Yogyakarta, Banyuwangi, Malang, Surabaya, Pontianak,
-        Balikpapan, Banjarmasin, Denpasar, Makassar, Manado, dan Ambon. \n\n So, stay tune di sini untuk
-        mendapatkan informasi terbaru.</string>
+    <string name="faq_answer_three">Kompetisi utama akan dilaksanakan di Jakarta sedangkan rangkaian
+        acara lain akan diselenggarakan di berbagai kota di seluruh Indonesia sesuai agenda yang
+        telah diselenggarakan. Peserta kompetisi dapat memilih lokasi yang terdekat untuk mengikuti
+        rangkaian acara NextDev. Untuk itu, jangan sampai kelewatan informasi tanggal acara dan
+        lokasi NextDev 2016.</string>
 
     <string name="faq_ask_four">Apakah ada kriteria untuk menjadi peserta NextDev?</string>
     <string name="faq_answer_four">Terdapat 4 kriteria umum untuk menjadi peserta NextDev:\n
@@ -89,19 +88,25 @@
         Sebaliknya, Anda akan dibantu untuk mengembangkan dan meluncurkan aplikasi Anda ke pasar secara nyata.</string>
 
     <string name="faq_ask_six">Apa saja keuntungan yang didapat dari NextDev?</string>
-    <string name="faq_answer_six">Keuntungan utama dari NextDev ada pada edukasi dan network.
-        Para peserta akan diberikan pembekalan dari praktisi­praktisi ternama di berbagai bidang
-        seperti Smart City, UX Design, New Wave Technology, Marketing, Finance dan lain­lain.
-        Selain itu, peserta akan dihubungkan dengan stakeholders terkait seperti pemerintah dan
-        investor potensial.</string>
+    <string name="faq_answer_six">Keuntungan utama dari NextDev adalah edukasi dan network.
+        Para peserta akan diberikan pembekalan dari praktisi-praktisi ternama di berbagai bidang
+        seperti Smart City, UX Design, New Wave Technology, Marketing, Finance dan lain-lain.
+        Sebagai contoh, NextDev 2015 menghadirkan Suhono Supangkat (Lecturer and Researcher at ITB,
+        Initiator of Smart City), Setiaji (Head of Jakarta Smart City), Yansen Kamto (Chief Executive Kibar),
+        Ivan Cahya Permana (VP Technology and System Telkomsel), Stephanie Hermawan (Chief Business Office at MarkPlus, Inc.)
+        dan lain-lain. Selain itu, peserta akan dihubungkan dengan stakeholders terkait seperti pemerintah dan investor potensial.</string>
 
     <string name="faq_ask_seven">Apakah ada biaya untuk pendaftaran NextDev?</string>
     <string name="faq_answer_seven">Semua acara NextDev tidak dikenakan biaya dan terbuka bagi
         siapapun yang memenuhi kriteria yang telah ditentukan.</string>
 
-    <string name="faq_ask_eight">Kepada siapa saya bisa menghubungi untuk penjelasan lebih detail
+    <string name="faq_ask_eight">Apakah acara terdekat untuk NextDev saat ini?</string>
+    <string name="faq_answer_eight">Roadshow NextDev 2016 merupakan acara paling dekat saat ini.
+        Temukan jadwal NextDev di kotamu di bagian “Join The Roadshow”.</string>
+
+    <string name="faq_ask_nine">Kepada siapa saya bisa menghubungi untuk penjelasan lebih detail
         mengenai NextDev?</string>
-    <string name="faq_answer_eight">Anda bisa menghubungi kami melalui email ke contact@thenextdev.id</string>
+    <string name="faq_answer_nine">Anda bisa menghubungi kami melalui email ke contact@thenextdev.id</string>
 
 
 

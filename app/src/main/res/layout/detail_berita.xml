@@ -10,7 +10,33 @@
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <include layout="@layout/toolbar" />
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_berita"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_detail_news"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -19,11 +45,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" >
-
-        <com.android.volley.toolbox.NetworkImageView
-            android:id="@+id/img_berita"
-            android:layout_width="match_parent"
-            android:layout_height="180dp" />
 
         <TextView
             android:id="@+id/txt_judul_berita"
@@ -34,7 +55,8 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:paddingRight="20dp"
             android:paddingLeft="20dp"
-            android:paddingBottom="10dp"/>
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"/>
 
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"

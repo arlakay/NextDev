@@ -11,6 +11,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
 
         <activity android:name=".SplashScreenActivity"
@@ -35,6 +36,13 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ScrollableTabsActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <data android:scheme="mailto" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
         </activity>
 
         <activity android:name=".LoginActivity"
@@ -73,7 +81,11 @@
         </activity>
 
         <activity android:name=".GalleryActivity"
-            android:label="Gallery" >
+            android:label="Gallery"
+            android:parentActivityName=".ScrollableTabsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ScrollableTabsActivity" />
 
         </activity>
 
@@ -147,7 +159,17 @@
 
         </activity>
 
-        <activity android:name=".HasilSubmitIdeActivity">
+        <activity android:name=".HasilSubmitIdeActivity"
+            android:label="Hasil">
+
+        </activity>
+
+        <activity android:name=".NewProfileActivity"
+            android:label="Profile"
+            android:parentActivityName=".ScrollableTabsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ScrollableTabsActivity" />
 
         </activity>
 

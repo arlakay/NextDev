@@ -22,7 +22,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.erd.nextdev2016.app.MyApplication;
-import com.erd.nextdev2016.fragment.FragmentProfileUser;
 import com.erd.nextdev2016.helper.SQLiteHandler;
 import com.erd.nextdev2016.helper.SessionManager;
 import com.erd.nextdev2016.util.Constants;
@@ -55,21 +54,15 @@ public class LoginActivity extends BaseActivity {
 			finish();
 		}
 
-		// Progress dialog
 		pDialog = new ProgressDialog(this);
 		pDialog.setCancelable(false);
 
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//		TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-//		toolbarTitle.setText("Login");
-//		toolbarTitle.setTextColor(Color.WHITE);
 		setSupportActionBar(toolbar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//		getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 		inputLayoutEmail = (TextInputLayout) findViewById(R.id.input_layout_email);
 		inputLayoutPassword = (TextInputLayout) findViewById(R.id.input_layout_password);
-
 		inputEmail = (EditText) findViewById(R.id.email);
 		inputPassword = (EditText) findViewById(R.id.password);
 
@@ -135,43 +128,22 @@ public class LoginActivity extends BaseActivity {
 
 				try {
 					JSONObject jObj = new JSONObject(response);
-					String pid = jObj.getString("participant_id");
-					String cid = jObj.getString("category_id");
-					String teamName = jObj.getString("team_name");
-					String fullName = jObj.getString("full_name");
+					String fullName = jObj.getString("nama_lengkap");
 					String email = jObj.getString("email");
-					String phoneNo = jObj.getString("phone_number");
 					String pass = jObj.getString("password");
-					//String web = jObj.getString("web");
 
 					session.setLogin(true);
 					session.createLoginSession(username, password);
 
-					Bundle bundle = new Bundle();
-					bundle.putString("pid", pid);
-					bundle.putString("tname", teamName);
-					bundle.putString("fname", fullName);
-
-					// set Fragmentclass Arguments
-					FragmentProfileUser fragobj = new FragmentProfileUser();
-					fragobj.setArguments(bundle);
-
-					// Launch main activity
-					Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
-					intent.putExtra("pid", pid);
-					intent.putExtra("cid", cid);
-					intent.putExtra("tName", teamName);
+					Intent intent = new Intent(LoginActivity.this, NewProfileActivity.class);
 					intent.putExtra("fName", fullName);
 					intent.putExtra("email", email);
-					intent.putExtra("phone", phoneNo);
 					intent.putExtra("pass", pass);
-					//intent.putExtra("web", web);
 
 					startActivity(intent);
 					finish();
 
 				} catch (JSONException e) {
-					// JSON error
 					e.printStackTrace();
 				}
 			}
@@ -180,18 +152,17 @@ public class LoginActivity extends BaseActivity {
 			public void onErrorResponse(VolleyError error) {
 				if (error != null) {
 					if (error.toString().equals("com.android.volley.ServerError")){
-						Toast.makeText(getApplicationContext(), "Phone Number and Password did not match", Toast.LENGTH_LONG).show();
+						Toast.makeText(getApplicationContext(), "Email and Password did not match", Toast.LENGTH_LONG).show();
 					} else{
 						Toast.makeText(getApplicationContext(), "Please try again later", Toast.LENGTH_LONG).show();
 					}
 					hideDialog();
 				}else{
-					Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+//					Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
 					hideDialog();}}
 		}) {
 			@Override
 			protected Map<String, String> getParams() {
-				// Posting parameters to login url
 				Map<String, String> params = new HashMap<String, String>();
 				params.put("cid", username);
 				params.put("pin", password);

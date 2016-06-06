@@ -9,21 +9,19 @@ import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
 
+import com.erd.nextdev2016.util.Constants;
+
 /**
  * Created by ILM on 5/8/2016.
  */
 public class HasilSubmitIdeActivity extends Activity {
-    private static final String url = "http://octolink.co.id/api/NextDev/index.php/api/Transaction/submitide";
+    private static final String url = Constants.BASE_URL + "/Transaction/submitide";
     private ProgressDialog pDialog;
     AlertDialog.Builder alertDialogBuilder;
-
     String namaTim_NextDev, namaOne_NextDev, dobOne_NextDev, jkOne_NextDev, provinsiOne_NextDev, kotaOne_NextDev, alamatOne_NextDev,
-
-    namaTwo_NextDev, dobTwo_NextDev, jkTwo_NextDev, telpTwo_NextDev, emailTwo_NextDev, onProfileTwo_NextDev,
-
-    namaThree_NextDev, dobThree_NextDev, jkThree_NextDev, telpThree_NextDev, emailThree_NextDev, onProfileThree_NextDev,
-
-    namaApp_NextDev, urlApp_NextDev, urlVideo_NextDev, platformApp_NextDev, deskripsiApp_NextDev;
+        namaTwo_NextDev, dobTwo_NextDev, jkTwo_NextDev, telpTwo_NextDev, emailTwo_NextDev, onProfileTwo_NextDev,
+        namaThree_NextDev, dobThree_NextDev, jkThree_NextDev, telpThree_NextDev, emailThree_NextDev, onProfileThree_NextDev,
+        namaApp_NextDev, urlApp_NextDev, urlVideo_NextDev, platformApp_NextDev, deskripsiApp_NextDev;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -16,13 +16,17 @@ import com.erd.nextdev2016.fragment.FragmentProfileUser;
 import com.erd.nextdev2016.helper.SessionManager;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
  * Created by ILM on 5/5/2016.
  */
 public class ProfileActivity extends BaseActivity {
+    private static final String TAG = ProfileActivity.class.getSimpleName();
+    public static final String FRAGMENT_MOVIES_TAG = "FragmentMoviesTag";
     private SessionManager session;
+    private static String cid, email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +35,17 @@ public class ProfileActivity extends BaseActivity {
 
         session = new SessionManager(getApplicationContext());
         if (!session.isLoggedIn()) {
-            Intent intent = new Intent(ProfileActivity.this, RegisterActivity.class);
+            Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
         }
+
+        session = new SessionManager(getApplicationContext());
+        HashMap<String, String> user = session.getUserDetails();
+        final String cid = user.get(SessionManager.KEY_CID);
+        final String fname = user.get(SessionManager.KEY_FNAME);
+
+        email = cid;
 
         Intent i = getIntent();
         String id = i.getStringExtra("pid");
@@ -61,6 +72,10 @@ public class ProfileActivity extends BaseActivity {
 
     }
 
+    public String getMyData() {
+        return email;
+    }
+
     private void logoutUser() {
         session.setLogin(false);
         Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
@@ -70,7 +85,7 @@ public class ProfileActivity extends BaseActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new FragmentProfileAchievements(), "ACHIEVEMENTS");
+        adapter.addFrag(new FragmentProfileAchievements(), "ACTIVITY");
         adapter.addFrag(new FragmentProfileUser(), "USER INFO");
 //        adapter.addFrag(new ThreeFragment(), "GALLERY");
 //        adapter.addFrag(new FourFragment(), "FAQ");

@@ -29,6 +29,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.erd.nextdev2016.app.MyApplication;
+import com.erd.nextdev2016.util.Constants;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,7 +41,7 @@ import java.util.Map;
  * Created by ILM on 5/4/2016.
  */
 public class RegisterActivity extends BaseActivity {
-    private static final String url = "http://octolink.co.id/api/NextDev/index.php/api/users/register";
+    private static final String url = Constants.BASE_URL + "/users/register";
     private String tname, fname, email, phone, pass, pass2;
     private Button btnRegister, btnLinkToLogin;
     private TextInputLayout inputLayoutFullName, inputLayoutNamaTim, inputLayoutEmail, inputLayoutNoTelp, inputLayoutPassword, inputLayoutPassword2;
@@ -53,21 +54,15 @@ public class RegisterActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
-        // Alert Dialog
         alertDialogBuilder = new AlertDialog.Builder(RegisterActivity.this, R.style.AppCompatAlertDialogStyle);
         alertDialogBuilder.setCancelable(false);
 
-        // Progress dialog
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-//        toolbarTitle.setText("Register");
-//        toolbarTitle.setTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         inputLayoutFullName = (TextInputLayout) findViewById(R.id.input_layout_nama_lengkap);
         inputLayoutNamaTim = (TextInputLayout) findViewById(R.id.input_layout_nama_tim);

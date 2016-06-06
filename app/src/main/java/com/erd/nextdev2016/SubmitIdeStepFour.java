@@ -9,7 +9,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -18,6 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.erd.nextdev2016.app.MyApplication;
 import com.erd.nextdev2016.helper.SessionManager;
+import com.erd.nextdev2016.util.Constants;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,9 +32,11 @@ import java.util.Map;
 /**
  * Created by ILM on 5/8/2016.
  */
-public class SubmitIdeStepFour extends AppCompatActivity {
-    private static final String url = "http://octolink.co.id/api/NextDev/index.php/api/transaction/submitidefour";
+public class SubmitIdeStepFour extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    private static final String url = Constants.BASE_URL + "/transaction/submitidefour";
     public String team, appName, appUrl, slideUrl, platform, appDescription;
+    public String selectedSort;
+    private Spinner spinner;
     private ProgressDialog pDialog;
     private AlertDialog.Builder alertDialogBuilder;
     private EditText etAppName, etAppUrl, etSlideUrl, etPlatform, etAppDescription;
@@ -67,6 +73,8 @@ public class SubmitIdeStepFour extends AppCompatActivity {
         etPlatform = (EditText)findViewById(R.id.platform);
         etAppDescription = (EditText)findViewById(R.id.web_app_description);
 
+        spinner = (Spinner)findViewById(R.id.spin_platform);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,11 +82,11 @@ public class SubmitIdeStepFour extends AppCompatActivity {
                 appName= etAppName.getText().toString();
                 appUrl = etAppUrl.getText().toString();
                 slideUrl = etSlideUrl.getText().toString();
-                platform = etPlatform.getText().toString();
+                platform = selectedSort.toString();
                 appDescription = etAppDescription.getText().toString();
 
                 if (appName.trim().length() > 0 && appUrl.trim().length() > 0 && slideUrl.trim().length() > 0
-                        && platform.trim().length() > 0 && appDescription.trim().length() > 0 ) {
+                        && appDescription.trim().length() > 0 ) {
 
                     storeMemberFour(team, appName, appUrl, slideUrl, platform, appDescription);
                 } else {
@@ -89,8 +97,31 @@ public class SubmitIdeStepFour extends AppCompatActivity {
                 }
             }
         });
+
+        setupSpinner();
     }
 
+    private void setupSpinner() {
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter
+                .createFromResource(this,
+                        R.array.platform,
+                        android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+    }
+
+    private String getSortByPosition(int position) {
+        switch (position) {
+            case 0: return "Android";
+            case 1: return "IOS";
+            case 2: return "Web";
+            case 3: return "WebApp";
+            default: return "Web";
+        }
+    }
 
     private void storeMemberFour(final String team, final String appname, final String appurl,
                                  final String slide, final String platform, final String deskripsi) {
@@ -199,5 +230,13 @@ public class SubmitIdeStepFour extends AppCompatActivity {
             pDialog.dismiss();
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        selectedSort = getSortByPosition(position);
+    }
 
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

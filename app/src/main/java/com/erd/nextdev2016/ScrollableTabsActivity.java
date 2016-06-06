@@ -28,7 +28,6 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-
 public class ScrollableTabsActivity extends BaseActivity {
     private RecyclerView recyclerView;
     private NavigationView navigationView;
@@ -75,48 +74,40 @@ public class ScrollableTabsActivity extends BaseActivity {
                         mCurrentSelectedPosition = 0;
                         return true;
                     case R.id.navigation_item_article:
-                        //Snackbar.make(mContentFrame, "", Snackbar.LENGTH_SHORT).show();
                         Intent intent2 = new Intent(ScrollableTabsActivity.this, ScrollableTabsActivity.class);
                         startActivity(intent2);
                         mCurrentSelectedPosition = 1;
                         return true;
                     case R.id.navigation_item_gallery:
-                        //Snackbar.make(mContentFrame, "", Snackbar.LENGTH_SHORT).show();
                         Intent intent8 = new Intent(ScrollableTabsActivity.this, GalleryActivity.class);
                         startActivity(intent8);
                         mCurrentSelectedPosition = 2;
                         return true;
                     case R.id.navigation_item_polling:
-                        //Snackbar.make(mContentFrame, "", Snackbar.LENGTH_SHORT).show();
                         Intent intent3 = new Intent(ScrollableTabsActivity.this, PollingActivity.class);
                         startActivity(intent3);
                         mCurrentSelectedPosition = 3;
                         return true;
                     case R.id.navigation_item_telkomsel_feed:
-                        //Snackbar.make(mContentFrame, "", Snackbar.LENGTH_SHORT).show();
                         Intent intent4 = new Intent(ScrollableTabsActivity.this, TelkomselPromoActivity.class);
                         startActivity(intent4);
                         mCurrentSelectedPosition = 4;
                         return true;
                     case R.id.navigation_item_booking:
-                        //Snackbar.make(mContentFrame, "", Snackbar.LENGTH_SHORT).show();
                         Intent intent5 = new Intent(ScrollableTabsActivity.this, JoinTheRoadshowActivity.class);
                         startActivity(intent5);
                         mCurrentSelectedPosition = 5;
                         return true;
                     case R.id.navigation_item_faq:
-                        //Snackbar.make(mContentFrame, "", Snackbar.LENGTH_SHORT).show();
                         Intent intent6 = new Intent(ScrollableTabsActivity.this, FAQActivity.class);
                         startActivity(intent6);
                         mCurrentSelectedPosition = 6;
                         return true;
                     case R.id.navigation_item_settings:
-                        //Snackbar.make(mContentFrame, "", Snackbar.LENGTH_SHORT).show();
                         Intent intent7 = new Intent(ScrollableTabsActivity.this, SettingsActivity.class);
                         startActivity(intent7);
                         mCurrentSelectedPosition = 7;
                         return true;
-
                     default:
                         return true;
                 }
@@ -130,8 +121,8 @@ public class ScrollableTabsActivity extends BaseActivity {
 
         session = new SessionManager(getApplicationContext());
         if (session.isLoggedIn()) {
-            txtActiveUserName.setVisibility(View.VISIBLE);
-            imgUser.setVisibility(View.VISIBLE);
+            txtActiveUserName.setVisibility(View.GONE);
+            imgUser.setVisibility(View.GONE);
         }else{
             txtActiveUserName.setVisibility(View.GONE);
             imgUser.setVisibility(View.GONE);
@@ -142,7 +133,6 @@ public class ScrollableTabsActivity extends BaseActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-
     }
 
     @Override
@@ -176,7 +166,7 @@ public class ScrollableTabsActivity extends BaseActivity {
                 return true;
             case R.id.action_user:
                 // Intent ke Login
-                Intent intent = new Intent(ScrollableTabsActivity.this, ProfileActivity.class);
+                Intent intent = new Intent(ScrollableTabsActivity.this, NewProfileActivity.class);
                 startActivity(intent);
                 return true;
 
@@ -186,8 +176,8 @@ public class ScrollableTabsActivity extends BaseActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new OneFragment(), "NEWS");
         adapter.addFrag(new TwoFragment(), "NEXTDEV 2016");
+        adapter.addFrag(new OneFragment(), "NEWS");
         //adapter.addFrag(new ThreeFragment(), "GALLERY");
         //adapter.addFrag(new FourFragment(), "FAQ");
         //adapter.addFrag(new FiveFragment(), "OTHER");

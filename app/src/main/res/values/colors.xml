@@ -8,4 +8,7 @@
     <color name="gray">#dddddd</color>
     <color name="black">#000000</color>
     <color name="red2">#ED2124</color>
+    <color name="orange">#F27422</color>
+    <color name="line">#AAAAAA</color>
+
 </resources>

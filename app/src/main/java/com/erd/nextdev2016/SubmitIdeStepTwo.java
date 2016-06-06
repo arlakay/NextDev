@@ -5,10 +5,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,6 +25,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.erd.nextdev2016.app.MyApplication;
 import com.erd.nextdev2016.helper.SessionManager;
+import com.erd.nextdev2016.util.Constants;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import org.json.JSONException;
@@ -35,7 +41,7 @@ import java.util.Map;
 public class SubmitIdeStepTwo extends AppCompatActivity implements
         DatePickerDialog.OnDateSetListener{
 
-    private static final String url = "http://octolink.co.id/api/NextDev/index.php/api/transaction/submitidetwo";
+    private static final String url = Constants.BASE_URL + "/transaction/submitidetwo";
     public String team, namaTwo, dobTwo, jkTwo, telpTwo, emailTwo, onProfileTwo;
     private ProgressDialog pDialog;
     private AlertDialog.Builder alertDialogBuilder;
@@ -43,6 +49,8 @@ public class SubmitIdeStepTwo extends AppCompatActivity implements
     private SessionManager session;
     private RadioGroup radioGroup;
     private RadioButton rb;
+    private TextInputLayout inputLayoutEmail, inputLayoutNoTelp;
+    private EditText inputEmail, inputNoTelp;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,6 +86,15 @@ public class SubmitIdeStepTwo extends AppCompatActivity implements
 
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
+        inputLayoutEmail = (TextInputLayout) findViewById(R.id.input_layout_email);
+        inputLayoutNoTelp = (TextInputLayout) findViewById(R.id.input_layout_phone);
+
+        inputEmail = (EditText) findViewById(R.id.email_member_two);
+        inputNoTelp = (EditText) findViewById(R.id.phone_member_two);
+
+        inputEmail.addTextChangedListener(new MyTextWatcher(inputEmail));
+        inputNoTelp.addTextChangedListener(new MyTextWatcher(inputNoTelp));
+
         etDobTwo.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -95,6 +112,8 @@ public class SubmitIdeStepTwo extends AppCompatActivity implements
                 }
             }
         });
+
+        radioGroup.check(R.id.radioButton1);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +141,49 @@ public class SubmitIdeStepTwo extends AppCompatActivity implements
                 }
             }
         });
+    }
+
+
+    private boolean validateEmail() {
+        String email = inputEmail.getText().toString().trim();
+
+        if (email.isEmpty() || !isValidEmail(email)) {
+            inputLayoutEmail.setError(getString(R.string.err_msg_email));
+            requestFocus(inputEmail);
+            return false;
+        } else {
+            inputLayoutEmail.setErrorEnabled(false);
+        }
+        return true;
+    }
+
+    private boolean validatePhone() {
+        String phoneNumber = inputNoTelp.getText().toString().trim();
+
+        if (phoneNumber.isEmpty() || !isPhoneNumberValid(phoneNumber)) {
+            inputLayoutNoTelp.setError(getString(R.string.err_msg_phone_number));
+            inputNoTelp.setError(getString(R.string.err_msg_phone_number));
+            requestFocus(inputNoTelp);
+            return false;
+        } else {
+            inputLayoutNoTelp.setErrorEnabled(false);
+        }
+        return true;
+    }
+
+    private static boolean isValidEmail(String email) {
+        return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
+
+    public static boolean isPhoneNumberValid(String phoneNumber) {
+        int intIndex = phoneNumber.indexOf("08");
+        return intIndex == 0 && phoneNumber.trim().length() > 9;
+    }
+
+    private void requestFocus(View view) {
+        if (view.requestFocus()) {
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        }
     }
 
     private void storeMemberTwo(final String team, final String nama, final String dob, final String jk,
@@ -245,6 +307,34 @@ public class SubmitIdeStepTwo extends AppCompatActivity implements
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
         String date = dayOfMonth+"/"+(++monthOfYear)+"/"+year;
         etDobTwo.setText(date);
+    }
+
+    private class MyTextWatcher implements TextWatcher {
+
+        private View view;
+
+        private MyTextWatcher(View view) {
+            this.view = view;
+        }
+
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        }
+
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        }
+
+        public void afterTextChanged(Editable editable) {
+            switch (view.getId()) {
+
+                case R.id.email_member_two:
+                    validateEmail();
+                    break;
+                case R.id.phone_member_two:
+                    validatePhone();
+                    break;
+
+            }
+        }
     }
 
 }

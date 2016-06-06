@@ -13,7 +13,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -147,9 +146,7 @@ public class OneFragment extends Fragment implements SearchView.OnQueryTextListe
                     adapter.notifyDataSetChanged();
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Toast.makeText(getActivity(),
-                            "Error: " + e.getMessage(),
-                            Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getActivity(), "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
                 }
                 swipeRefreshLayout.setRefreshing(false);
             }
@@ -158,8 +155,7 @@ public class OneFragment extends Fragment implements SearchView.OnQueryTextListe
             public void onErrorResponse(VolleyError error) {
                 //VolleyLog.d(TAG, "Error: " + error.getMessage());
                 swipeRefreshLayout.setRefreshing(false);
-                Toast.makeText(getActivity(),
-                        error.getMessage(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
         MyApplication.getInstance().addToRequestQueue(req);

@@ -8,12 +8,12 @@
         <item
             android:id="@+id/navigation_item_apply_idea"
             android:checked="true"
-            android:icon="@drawable/submitidea"
+            android:icon="@drawable/ic_lightbulb_outline_black_24dp"
             android:title="Submit Your Idea!" />
 
         <item
             android:id="@+id/navigation_item_article"
-            android:icon="@drawable/home"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
 
         <item
@@ -23,17 +23,17 @@
 
         <item
             android:id="@+id/navigation_item_polling"
-            android:icon="@drawable/polling"
+            android:icon="@drawable/ic_timeline_black_24dp"
             android:title="Polling" />
 
         <item
             android:id="@+id/navigation_item_telkomsel_feed"
-            android:icon="@drawable/telkomselpromo"
+            android:icon="@drawable/ic_loyalty_black_24dp"
             android:title="Telkomsel Promo" />
 
         <item
             android:id="@+id/navigation_item_booking"
-            android:icon="@drawable/joinroadshow"
+            android:icon="@drawable/ic_event_black_24dp"
             android:title="Join The Roadshow" />
 
         <item

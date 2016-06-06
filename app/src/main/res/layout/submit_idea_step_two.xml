@@ -27,6 +27,13 @@
             android:layout_height="match_parent"
             android:padding="10dp">
 
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_step_2"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_horizontal"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,26 +45,40 @@
                 android:padding="20dp"
                 android:textColor="@color/red2"/>
 
-                <EditText
-                    android:id="@+id/nama_member_two"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:hint="Name"
-                    android:inputType="text"
-                    android:padding="10dp"
-                    android:singleLine="true"
-                    android:allowUndo="true" />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_name_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/dob_member_two"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:hint="Date of Birth (DD-MM-YYYY)"
-                    android:inputType="text"
-                    android:padding="10dp"
-                    android:singleLine="true"/>
+                    <EditText
+                        android:id="@+id/nama_member_two"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:hint="Name"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:allowUndo="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_date_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/dob_member_two"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:hint="Date of Birth (DD-MM-YYYY)"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:singleLine="true"/>
+
+                </android.support.design.widget.TextInputLayout>
 
                 <EditText
                     android:id="@+id/gender_member_two"
@@ -70,12 +91,20 @@
                     android:singleLine="true"
                     android:visibility="gone"/>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:padding="10dp"/>
+
                 <RadioGroup
                     android:layout_margin="@dimen/activity_horizontal_margin"
                     android:id="@+id/radioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    >
 
                     <RadioButton
                         android:id="@+id/radioButton1"
@@ -95,35 +124,56 @@
 
                 </RadioGroup>
 
-                <EditText
-                    android:id="@+id/phone_member_two"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:hint="Phone Number"
-                    android:inputType="phone"
-                    android:padding="10dp"
-                    android:singleLine="true" />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/email_member_two"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:hint="E-mail "
-                    android:inputType="textEmailAddress"
-                    android:padding="10dp"
-                    android:singleLine="true" />
+                    <EditText
+                        android:id="@+id/phone_member_two"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:hint="Phone Number"
+                        android:inputType="phone"
+                        android:padding="10dp"
+                        android:singleLine="true" />
 
-                <EditText
-                    android:id="@+id/online_profile_member_two"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="36dp"
-                    android:hint="Online Profile"
-                    android:inputType="textUri"
-                    android:padding="10dp"
-                    android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/email_member_two"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:hint="E-mail "
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_online_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/online_profile_member_two"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="36dp"
+                        android:hint="Online Profile"
+                        android:inputType="textUri"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 

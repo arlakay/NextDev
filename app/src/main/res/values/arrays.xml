@@ -52,12 +52,49 @@
             di mana 55 diantaranya berasal dari Indonesia. Selebihnya, ada 15 startup dari Amerika Serikat dan 150 startup</item>
 
     </string-array>
-    <string-array name="gambar">
-        <item>satu.jpg</item>
-        <item>dua.jpeg</item>
-        <item>tiga.jpg</item>
-        <item>empat.jpg</item>
-        <item>lima.jpg</item>
+
+    <string-array name="province">
+        <item>Nanggroe Aceh Darussalam (NAD)</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Riau</item>
+        <item>Kepulauan Riau</item>
+        <item>Jambi</item>
+        <item>Bengkulu</item>
+        <item>Sumatera Selatan</item>
+        <item>Kepulauan Bangka Belitung</item>
+        <item>Lampung</item>
+        <item>Banten</item>
+        <item>Jawa Barat</item>
+        <item>DKI Jakarta</item>
+        <item>Jawa Tengah</item>
+        <item>Daerah Istimewa Yogyakarta</item>
+        <item>Jawa Timur</item>
+        <item>Bali</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Timur</item>
+        <item>Kalimantan Utara</item>
+        <item>Gorontalo</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Barat</item>
+        <item>Maluku</item>
+        <item>Maluku Utara</item>
+        <item>Papua</item>
+        <item>Papua Barat</item>
+    </string-array>
+
+    <string-array name="platform">
+        <item>Android</item>
+        <item>IOS</item>
+        <item>Web</item>
+        <item>WebApp</item>
 
     </string-array>
 

@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout"
+    android:background="@color/gray">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/toolbar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rel_jogja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_yogyakarta"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_jogja"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Yogyakarta"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_yogyakarta"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yogyakarta"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20-May-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_jogja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_semarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_semarang"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_semarang"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Semarang"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_semarang"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semarang"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24-May-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_semarang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_surabaya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_surabaya"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_surabaya"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Surabaya"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_surabaya"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Surabaya"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="26-May-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_surabaya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_malang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_malang"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_malang"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Malang"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_malang"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Malang"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="31-May-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_malang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_banyuwangi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_banyuwangi"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_banyuwangi"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Banyuwangi"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_banyuwangi"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Banyuwangi"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2-June-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_banyuwangi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_denpasar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_denpasar"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_bali"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Denpasar"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_denpasar"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Denpasar"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="19-July-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_denpasar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_bandung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_bandung"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_bandung"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Bandung"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_bandung"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bandung"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21-July-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_bandung"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_bogor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_bogor"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_bogor"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Bogor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_bogor"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bogor"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="26-July-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_bogor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_jakarta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_jakarta"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_jakarta"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Jakarta"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_jakarta"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jakarta"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28-July-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_jakarta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_aceh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_aceh"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_aceh"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Banda Aceh"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_aceh"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aceh"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_aceh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_medan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_medan"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_medan"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Medan"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_medan"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medan"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_medan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_pekanbaru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_pekanbaru"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_pekanbaru"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Pekanbaru"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_pekanbaru"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pekanbaru"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_pekanbaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_palembang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_palembang"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_palembang"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Palembang"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_palembang"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Palembang"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_palembang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_lampung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_lampung"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_lampung"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Gorontalo"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_lampung"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lampung"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="16-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_lampung"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_manado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_manado"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_manado"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Manado"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_manado"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manado"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="18-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_manado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_ambon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_ambon"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_ambon"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Ambon"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_ambon"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ambon"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="23-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_ambon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_makassar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_makassar"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_makassar"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Makassar"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_makassar"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Makassar"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_makassar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_banjarmasin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_banjarmasin"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_banjarmasin"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Banjarmasin"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_banjarmasin"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Banjarmasin"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_banjarmasin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_balikpapan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_balikpapan"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_balikpapan"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Balikpapan"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_balikpapan"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balikpapan"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1-September-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_balikpapan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_pontianak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_pontianak"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_pontianak"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Pontianak"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_pontianak"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pontianak"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6-September-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_pontianak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
