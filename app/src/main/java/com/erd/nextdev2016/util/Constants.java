@@ -8,6 +8,6 @@ public class Constants {
     private Constants() {
     }
 
-    public static final String BASE_URL = "http://octolink.co.id/api/NextDev/index.php/api";
+    public static final String BASE_URL = "http://192.168.43.246/api/NextDev/index.php/api";
 
 }
