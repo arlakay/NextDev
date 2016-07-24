@@ -57,7 +57,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20-May-2016"
+                        android:text="19-May-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="24-May-2016"
+                        android:text="2-June-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -134,45 +134,45 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rel_surabaya"
+                android:id="@+id/rel_denpasar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:layout_margin="5dp">
 
                 <ImageButton
-                    android:id="@+id/btn_surabaya"
+                    android:id="@+id/btn_denpasar"
                     android:layout_width="144dp"
                     android:layout_height="144dp"
-                    android:src="@drawable/ic_surabaya"
+                    android:src="@drawable/ic_bali"
                     android:scaleType="fitXY"
                     android:background="@null"
-                    android:text="Surabaya"/>
+                    android:text="Denpasar"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_toRightOf="@+id/btn_surabaya"
+                    android:layout_toRightOf="@+id/btn_denpasar"
                     android:layout_centerVertical="true">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Surabaya"
+                        android:text="Denpasar"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="26-May-2016"
+                        android:text="21-July-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="@color/line"/>
                     <TextView
-                        android:id="@+id/register_surabaya"
+                        android:id="@+id/register_denpasar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Register Here"
@@ -219,7 +219,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="31-May-2016"
+                        android:text="26-July-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -273,7 +273,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2-June-2016"
+                        android:text="28-July-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -296,45 +296,45 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rel_denpasar"
+                android:id="@+id/rel_surabaya"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:layout_margin="5dp">
 
                 <ImageButton
-                    android:id="@+id/btn_denpasar"
+                    android:id="@+id/btn_surabaya"
                     android:layout_width="144dp"
                     android:layout_height="144dp"
-                    android:src="@drawable/ic_bali"
+                    android:src="@drawable/ic_surabaya"
                     android:scaleType="fitXY"
                     android:background="@null"
-                    android:text="Denpasar"/>
+                    android:text="Surabaya"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_toRightOf="@+id/btn_denpasar"
+                    android:layout_toRightOf="@+id/btn_surabaya"
                     android:layout_centerVertical="true">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Denpasar"
+                        android:text="Surabaya"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="19-July-2016"
+                        android:text="2-August-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="@color/line"/>
                     <TextView
-                        android:id="@+id/register_denpasar"
+                        android:id="@+id/register_surabaya"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Register Here"
@@ -381,7 +381,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="21-July-2016"
+                        android:text="4-August-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -435,7 +435,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="26-July-2016"
+                        android:text="9-August-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -489,7 +489,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="28-July-2016"
+                        android:text="11-August-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -537,13 +537,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Aceh"
+                        android:text="Banda Aceh"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2-August-2016"
+                        android:text="16-August-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -597,7 +597,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4-August-2016"
+                        android:text="19-August-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -651,7 +651,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="9-August-2016"
+                        android:text="23-August-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -705,7 +705,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="11-August-2016"
+                        android:text="25-August-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -728,14 +728,68 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/rel_lampung"
+                android:id="@+id/rel_makassar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:layout_margin="5dp">
 
                 <ImageButton
-                    android:id="@+id/btn_lampung"
+                    android:id="@+id/btn_makassar"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/ic_makassar"
+                    android:scaleType="fitXY"
+                    android:background="@null"
+                    android:text="Makassar"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/btn_makassar"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Makassar"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30-August-2016"
+                        android:padding="10dp"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"/>
+                    <TextView
+                        android:id="@+id/register_makassar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register Here"
+                        android:textStyle="bold"
+                        android:textColor="@color/orange"
+                        android:textAllCaps="true"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_gorontalo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_gorontalo"
                     android:layout_width="144dp"
                     android:layout_height="144dp"
                     android:src="@drawable/ic_lampung"
@@ -747,19 +801,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_toRightOf="@+id/btn_lampung"
+                    android:layout_toRightOf="@+id/btn_gorontalo"
                     android:layout_centerVertical="true">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Lampung"
+                        android:text="Gorontalo"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:padding="10dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="16-August-2016"
+                        android:text="1-September-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -813,7 +867,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="18-August-2016"
+                        android:text="6-September-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -867,7 +921,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="23-August-2016"
+                        android:text="8-September-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -875,60 +929,6 @@
                         android:background="@color/line"/>
                     <TextView
                         android:id="@+id/register_ambon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Register Here"
-                        android:textStyle="bold"
-                        android:textColor="@color/orange"
-                        android:textAllCaps="true"
-                        android:layout_gravity="right"
-                        android:gravity="right"
-                        android:padding="10dp"/>
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rel_makassar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:layout_margin="5dp">
-
-                <ImageButton
-                    android:id="@+id/btn_makassar"
-                    android:layout_width="144dp"
-                    android:layout_height="144dp"
-                    android:src="@drawable/ic_makassar"
-                    android:scaleType="fitXY"
-                    android:background="@null"
-                    android:text="Makassar"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_toRightOf="@+id/btn_makassar"
-                    android:layout_centerVertical="true">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Makassar"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        android:padding="10dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="25-August-2016"
-                        android:padding="10dp"/>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/line"/>
-                    <TextView
-                        android:id="@+id/register_makassar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Register Here"
@@ -975,7 +975,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="30-August-2016"
+                        android:text="15-September-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -1029,7 +1029,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1-September-2016"
+                        android:text="20-September-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"
@@ -1083,7 +1083,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="6-September-2016"
+                        android:text="22-September-2016"
                         android:padding="10dp"/>
                     <View
                         android:layout_width="match_parent"

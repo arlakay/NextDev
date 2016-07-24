@@ -30,7 +30,8 @@ import java.util.ArrayList;
 public class GalleryActivity extends BaseActivity {
 
     private String TAG = GalleryActivity.class.getSimpleName();
-    private static final String endpoint = "https://api.instagram.com/v1/tags/nextdev2016/media/recent?access_token=3257218348.1677ed0.d56e3c7f90bb44cbab514b2dc7dc3507";
+//    private static final String endpoint = "https://api.instagram.com/v1/tags/nextdev2016/media/recent?access_token=3257218348.1677ed0.d56e3c7f90bb44cbab514b2dc7dc3507";
+    private static final String endpoint = "http://octolink.co.id/api/NextDev/index.php/api/Transaction/gallery";
     private ArrayList<Image> images;
     private ProgressDialog pDialog;
     private GalleryAdapter mAdapter;
@@ -81,66 +82,110 @@ public class GalleryActivity extends BaseActivity {
 
     private void fetchImages() {
 
-        pDialog.setMessage("Loading...");
+        pDialog.setMessage("Loading Image");
         pDialog.show();
 
         JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET,
                 endpoint, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                        String rs = response.toString();
-                        pDialog.hide();
-                        images.clear();
+                String rs = response.toString();
+                //Log.d(TAG, response.toString());
+                pDialog.hide();
 
-                        try {
-                            JSONObject job = new JSONObject(rs);
-                            JSONArray data = job.getJSONArray("data");
+                images.clear();
 
-                            for (int i = 0; i < data.length(); i++) {
+                try {
+                    JSONObject job = new JSONObject(rs);
+                    data = job.getJSONArray("gallery");
 
-                                JSONObject person = data.getJSONObject(i);
+                    for (int i = 0; i < data.length(); i++) {
 
-                                JSONObject caption = person.getJSONObject("caption");
-                                String text = caption.getString("text");
-                                JSONObject from = caption.getJSONObject("from");
-                                String fullname = from.getString("full_name");
+                        JSONObject url = data.getJSONObject(i);
 
-                                JSONObject url = person.getJSONObject("images");
+                        Image image = new Image();
 
-                                JSONObject tumb = url.getJSONObject("thumbnail");
-                                String link = tumb.getString("url");
+                        image.setSmall(url.getString("img_url"));
+                        image.setMedium(url.getString("img_url"));
+                        image.setLarge(url.getString("img_url"));
 
-                                JSONObject tumb2 = url.getJSONObject("standard_resolution");
-                                String link2 = tumb2.getString("url");
+                        images.add(image);
 
-                                JSONObject tumb3 = url.getJSONObject("low_resolution");
-                                String link3 = tumb3.getString("url");
-
-                                Image image = new Image();
-                                image.setName(fullname);
-                                image.setSmall(link);
-                                image.setMedium(link3);
-                                image.setLarge(link2);
-                                image.setTimestamp(text);
-
-                                images.add(image);
-
-                            }
-                            mAdapter.notifyDataSetChanged();
-                        } catch (JSONException e) {
-                            //Log.e(TAG, "Json parsing error: " + e.getMessage());
-                        }
-                        mAdapter.notifyDataSetChanged();
                     }
-                }, new Response.ErrorListener() {
+                } catch (JSONException e) {
+                    //Log.e(TAG, "Json parsing error: " + e.getMessage());
+                }
+                mAdapter.notifyDataSetChanged();
+            }
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 //Log.e(TAG, "Error: " + error.getMessage());
                 pDialog.hide();
             }
         });
-
-        // Adding request to request queue
         MyApplication.getInstance().addToRequestQueue(req);
     }
+
+    private void fetchImagesInstagram() {
+//        pDialog.setMessage("Loading...");
+//        pDialog.show();
+//
+//        JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET,
+//                endpoint, null, new Response.Listener<JSONObject>() {
+//            @Override
+//            public void onResponse(JSONObject response) {
+//                        String rs = response.toString();
+//                        pDialog.hide();
+//                        images.clear();
+//
+//                        try {
+//                            JSONObject job = new JSONObject(rs);
+//                            JSONArray data = job.getJSONArray("data");
+//
+//                            for (int i = 0; i < data.length(); i++) {
+//
+//                                JSONObject person = data.getJSONObject(i);
+//
+//                                JSONObject caption = person.getJSONObject("caption");
+//                                String text = caption.getString("text");
+//                                JSONObject from = caption.getJSONObject("from");
+//                                String fullname = from.getString("full_name");
+//
+//                                JSONObject url = person.getJSONObject("images");
+//
+//                                JSONObject tumb = url.getJSONObject("thumbnail");
+//                                String link = tumb.getString("url");
+//
+//                                JSONObject tumb2 = url.getJSONObject("standard_resolution");
+//                                String link2 = tumb2.getString("url");
+//
+//                                JSONObject tumb3 = url.getJSONObject("low_resolution");
+//                                String link3 = tumb3.getString("url");
+//
+//                                Image image = new Image();
+//                                image.setName(fullname);
+//                                image.setSmall(link);
+//                                image.setMedium(link3);
+//                                image.setLarge(link2);
+//                                image.setTimestamp(text);
+//
+//                                images.add(image);
+//                            }
+//                            mAdapter.notifyDataSetChanged();
+//                        } catch (JSONException e) {
+//                            //Log.e(TAG, "Json parsing error: " + e.getMessage());
+//                        }
+//                        mAdapter.notifyDataSetChanged();
+//                    }
+//                }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                //Log.e(TAG, "Error: " + error.getMessage());
+//                pDialog.hide();
+//            }
+//        });
+//        MyApplication.getInstance().addToRequestQueue(req);
+    }
+
 }
